@@ -12,7 +12,7 @@
         android:supportsRtl="true">
 
         <meta-data android:name="TD_APP_ID" android:value="${TD_APPID}" />
-        <meta-data android:name="TD_CHANNEL_ID" android:value="${APP_CHANNEL}" />
+        <meta-data android:name="TD_CHANNEL_ID" android:value="${CHANNEL_DESC}" />
     </application>
 
 </manifest>
