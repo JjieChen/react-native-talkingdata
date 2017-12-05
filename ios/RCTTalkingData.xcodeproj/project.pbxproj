@@ -31,7 +31,6 @@
 		917043361C439F4C0028747B /* RCTTalkingData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTTalkingData.m; sourceTree = "<group>"; };
 		917043681C439FC20028747B /* libTalkingData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingData.a; sourceTree = "<group>"; };
 		917043691C439FC20028747B /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
-		9170436A1C439FC20028747B /* TalkingDataSMS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingDataSMS.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +76,6 @@
 			children = (
 				917043681C439FC20028747B /* libTalkingData.a */,
 				917043691C439FC20028747B /* TalkingData.h */,
-				9170436A1C439FC20028747B /* TalkingDataSMS.h */,
 			);
 			path = TalkingDataSDK;
 			sourceTree = "<group>";

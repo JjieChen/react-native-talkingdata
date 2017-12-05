@@ -27,11 +27,3 @@ export function getDeviceID() {
     nativeModule.getDeviceID(resolve);
   })
 }
-
-export async function applyAuthCode(countryCode, mobile, requestId) {
-  return await nativeModule.applyAuthCode(countryCode, mobile, requestId);
-}
-
-export async function verifyAuthCode(countryCode, mobile, authCode) {
-  return await nativeModule.verifyAuthCode(countryCode, mobile, authCode);
-}
