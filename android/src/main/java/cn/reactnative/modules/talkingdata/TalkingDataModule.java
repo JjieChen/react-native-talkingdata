@@ -11,9 +11,9 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.ReadableType;
 import com.tendcloud.tenddata.TCAgent;
-import com.tendcloud.tenddata.TalkingDataSMS;
-import com.tendcloud.tenddata.TalkingDataSMSApplyCallback;
-import com.tendcloud.tenddata.TalkingDataSMSVerifyCallback;
+//import com.tendcloud.tenddata.TalkingDataSMS;
+//import com.tendcloud.tenddata.TalkingDataSMSApplyCallback;
+//import com.tendcloud.tenddata.TalkingDataSMSVerifyCallback;
 
 import java.util.HashMap;
 
@@ -47,9 +47,9 @@ public class TalkingDataModule extends ReactContextBaseJavaModule {
             registered = true;
         }
     }
-    public static void registerSMS(Context context, String appID, String secretId) {
-        TalkingDataSMS.init(context, appID, secretId);
-    }
+//    public static void registerSMS(Context context, String appID, String secretId) {
+//        TalkingDataSMS.init(context, appID, secretId);
+//    }
 
     @Override
     public void initialize() {
@@ -117,47 +117,47 @@ public class TalkingDataModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void applyAuthCode(String countryCode, String mobile, String requestId, final Promise promise) {
-        if (requestId!=null) {
-            TalkingDataSMS.applyAuthCode(countryCode, mobile, new TalkingDataSMSApplyCallback() {
-                @Override
-                public void onApplySucc(String s) {
-                    promise.resolve(s);
-                }
-
-                @Override
-                public void onApplyFailed(int i, String s) {
-                    promise.reject(""+i,s,null);
-                }
-            });
-        }
-        else {
-            TalkingDataSMS.reapplyAuthCode(countryCode, mobile, requestId, new TalkingDataSMSApplyCallback() {
-                @Override
-                public void onApplySucc(String s) {
-                    promise.resolve(s);
-                }
-
-                @Override
-                public void onApplyFailed(int i, String s) {
-                    promise.reject(""+i,s,null);
-                }
-            });
-        }
+//        if (requestId!=null) {
+//            TalkingDataSMS.applyAuthCode(countryCode, mobile, new TalkingDataSMSApplyCallback() {
+//                @Override
+//                public void onApplySucc(String s) {
+//                    promise.resolve(s);
+//                }
+//
+//                @Override
+//                public void onApplyFailed(int i, String s) {
+//                    promise.reject(""+i,s,null);
+//                }
+//            });
+//        }
+//        else {
+//            TalkingDataSMS.reapplyAuthCode(countryCode, mobile, requestId, new TalkingDataSMSApplyCallback() {
+//                @Override
+//                public void onApplySucc(String s) {
+//                    promise.resolve(s);
+//                }
+//
+//                @Override
+//                public void onApplyFailed(int i, String s) {
+//                    promise.reject(""+i,s,null);
+//                }
+//            });
+//        }
     }
 
     @ReactMethod
     public void verifyAuthCode(String countryCode, String mobile, String authCode, final Promise promise) {
-        TalkingDataSMS.verifyAuthCode(countryCode, mobile, authCode, new TalkingDataSMSVerifyCallback() {
-            @Override
-            public void onVerifySucc(String s) {
-                promise.resolve(s);
-            }
-
-            @Override
-            public void onVerifyFailed(int i, String s) {
-                promise.reject(""+i,s,null);
-            }
-        });
+//        TalkingDataSMS.verifyAuthCode(countryCode, mobile, authCode, new TalkingDataSMSVerifyCallback() {
+//            @Override
+//            public void onVerifySucc(String s) {
+//                promise.resolve(s);
+//            }
+//
+//            @Override
+//            public void onVerifyFailed(int i, String s) {
+//                promise.reject(""+i,s,null);
+//            }
+//        });
     }
 }
 
